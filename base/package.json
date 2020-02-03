@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-whiteroom-base",
+  "version": "0.1.0",
+  "description": "White Room Base Eslint Configuration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chungweileong94/eslint-config-whiteroom"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "eslint": "^5.16.0 || ^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-import-helpers": "^1.0.2"
+  },
+  "scripts": {},
+  "author": "Chung Wei <leongchungwei@hotmail.com>",
+  "license": "ISC"
+}
