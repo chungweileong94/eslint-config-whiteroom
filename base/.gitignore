@@ -7,3 +7,5 @@ jspm_packages
 .env
 .env.*
 !.env.example
+
+package-lock.json
