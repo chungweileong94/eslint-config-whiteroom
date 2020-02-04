@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-whiteroom-base",
-  "version": "0.1.0",
-  "description": "White Room Base Eslint Configuration",
+  "version": "0.2.0",
+  "description": "White Room (Base) Eslint Configuration",
   "repository": {
     "type": "git",
     "url": "https://github.com/chungweileong94/eslint-config-whiteroom"
