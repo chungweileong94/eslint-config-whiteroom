@@ -1,0 +1,11 @@
+# package directories
+node_modules
+jspm_packages
+
+.webpack
+
+.env
+.env.*
+!.env.example
+
+package-lock.json
