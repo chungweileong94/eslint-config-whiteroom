@@ -1,3 +1,3 @@
-# White Room ESLint Configuration
+# eslint-config-whiteroom-react
 
-## Work in progress 🤪
+***Work in progress*** 🤪
