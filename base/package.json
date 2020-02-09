@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-whiteroom-base",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "White Room (Base) Eslint Configuration",
   "author": "Chung Wei <leongchungwei@hotmail.com>",
   "repository": {
