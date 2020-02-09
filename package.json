@@ -5,7 +5,11 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "install": "cd ./base && npm i && cd ../share && npm i && cd ../react && npm i"
+    "install:share": "cd ./share && npm i",
+    "install:base": "cd ./base && npm i",
+    "install:react": "cd ./react && npm i",
+    "install": "npm run install:share && npm run install:base && npm run install:react",
+    "patchPeerDependencies": "node dependencies.js"
   },
   "repository": {
     "type": "git",
