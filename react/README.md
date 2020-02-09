@@ -1,6 +1,6 @@
 # eslint-config-whiteroom-react
 
-![npm](https://img.shields.io/npm/v/eslint-config-whiteroom-react?color=green)
+[![npm version](https://badge.fury.io/js/eslint-config-whiteroom-react.svg)](https://badge.fury.io/js/eslint-config-whiteroom-react)
 
 ## Get Started
 Our eslint config required certain packages to be installed.

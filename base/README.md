@@ -1,6 +1,6 @@
 # eslint-config-whiteroom-base
 
-![npm](https://img.shields.io/npm/v/eslint-config-whiteroom-base?color=green)
+[![npm version](https://badge.fury.io/js/eslint-config-whiteroom-base.svg)](https://badge.fury.io/js/eslint-config-whiteroom-base)
 
 ## Get Started
 Our eslint config required certain packages to be installed.
