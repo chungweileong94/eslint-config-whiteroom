@@ -1,5 +1,7 @@
 # eslint-config-whiteroom-base
 
+![npm](https://img.shields.io/npm/v/eslint-config-whiteroom-base?color=green)
+
 ## Get Started
 Our eslint config required certain packages to be installed.
 
