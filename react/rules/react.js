@@ -9,7 +9,6 @@ module.exports = {
         'react-hooks'
     ],
     rules: {
-        'react/jsx-indent': 'off',
         'react/jsx-filename-extension': 'off',
         'react/forbid-prop-types': 'off',
         'react/jsx-props-no-spreading': 'off',
