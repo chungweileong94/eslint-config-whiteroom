@@ -4,7 +4,7 @@ module.exports = {
     node: true,
     browser: true
   },
-  extends: ['./rules/import.js', './rules/index.js'].map(require.resolve),
+  extends: ['./rules/import.js', './rules/index.js', 'eslint-config-prettier'].map(require.resolve),
   plugins: ['prettier'],
   globals: {
     Atomics: 'readonly',
