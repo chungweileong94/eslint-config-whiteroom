@@ -2,12 +2,10 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true,
+    browser: true
   },
-  extends: [
-    './rules/import.js',
-    './rules/index.js'
-  ].map(require.resolve),
+  extends: ['./rules/import.js', './rules/index.js'].map(require.resolve),
+  plugins: ['prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -18,5 +16,7 @@ module.exports = {
     sourceType: 'module',
     allowImportExportEverywhere: true
   },
-  rules: {}
+  rules: {
+    'prettier/prettier': 'error'
+  }
 };
