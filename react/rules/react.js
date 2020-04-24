@@ -5,6 +5,7 @@ module.exports = {
     }
   },
   plugins: ['react', 'react-hooks'],
+  extends: 'plugin:react-hooks/recommended',
   rules: {
     'react/jsx-filename-extension': 'off',
     'react/forbid-prop-types': 'off',
