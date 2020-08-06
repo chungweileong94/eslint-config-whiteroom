@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-whiteroom-react",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "White Room (React) Eslint Configuration",
   "author": "Chung Wei <leongchungwei@hotmail.com>",
   "repository": {

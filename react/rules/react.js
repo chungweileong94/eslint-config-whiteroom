@@ -5,7 +5,7 @@ module.exports = {
     }
   },
   plugins: ['react', 'react-hooks'],
-  extends: 'plugin:react-hooks/recommended',
+  extends: ['plugin:react-hooks/recommended', 'prettier/react'],
   rules: {
     'react/jsx-filename-extension': 'off',
     'react/forbid-prop-types': 'off',
