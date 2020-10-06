@@ -4,7 +4,6 @@ module.exports = {
     node: true,
     browser: true
   },
-  extends: ['./rules/import.js', './rules/index.js', 'eslint-config-prettier'].map(require.resolve),
   plugins: ['prettier'],
   globals: {
     Atomics: 'readonly',
@@ -16,6 +15,16 @@ module.exports = {
     sourceType: 'module',
     allowImportExportEverywhere: true
   },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint']
+    }
+  ],
+  extends: ['./rules/import.js', './rules/typescript.js', './rules/index.js', 'eslint-config-prettier'].map(
+    require.resolve
+  ),
   rules: {
     'prettier/prettier': 'error'
   }

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-whiteroom-react",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "White Room (React) Eslint Configuration",
   "author": "Chung Wei <leongchungwei@hotmail.com>",
   "repository": {
@@ -27,7 +27,8 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
-    "eslint-config-prettier": "^6.12.0"
+    "eslint-config-prettier": "^6.12.0",
+    "typescript": "^4.0.3"
   },
   "peerDependencies": {
     "eslint": "^5.16.0 || ^6.7.2",
@@ -41,6 +42,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.1.2",
-    "eslint-config-prettier": "^6.12.0"
+    "eslint-config-prettier": "^6.12.0",
+    "typescript": "^4.0.3"
   }
 }
