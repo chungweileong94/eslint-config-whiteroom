@@ -8,9 +8,6 @@ module.exports = {
     radix: 'off',
     'no-plusplus': 'off',
     'func-names': 'off',
-    'arrow-parens': [
-      'warn',
-      'as-needed'
-    ]
+    'arrow-parens': ['warn', 'as-needed']
   }
 };

@@ -4,21 +4,34 @@ const fs = require('fs');
 
 const shareDependencies = require('./share/package.json').peerDependencies;
 
-const PACKAGE_PATHS = ['./base/package.json', './react/package.json'];
+const PACKAGE_PATHS = [
+  {
+    path: './base/package.json'
+  },
+  {
+    path: './react/package.json',
+    // eslint-config-react-app came with another version
+    ignorePackages: ['@typescript-eslint/eslint-plugin', '@typescript-eslint/parser']
+  }
+];
 
-const patchDependencies = packagePath => {
+const patchDependencies = (packagePath, ignorePackages = []) => {
   const packageObj = require(packagePath);
+
+  const filteredDependencies = Object.fromEntries(
+    Object.entries(shareDependencies).filter(([key]) => !ignorePackages.includes(key))
+  );
 
   // Patch dependencies
   const newPackageObj = {
     ...packageObj,
     devDependencies: {
       ...packageObj.devDependencies,
-      ...shareDependencies
+      ...filteredDependencies
     },
     peerDependencies: {
       ...packageObj.peerDependencies,
-      ...shareDependencies
+      ...filteredDependencies
     }
   };
 
@@ -34,4 +47,4 @@ const patchDependencies = packagePath => {
   });
 };
 
-PACKAGE_PATHS.forEach(path => patchDependencies(path));
+PACKAGE_PATHS.forEach(({path, ignorePackages}) => patchDependencies(path, ignorePackages, ignorePackages));
