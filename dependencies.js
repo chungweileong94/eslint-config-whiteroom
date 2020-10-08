@@ -9,9 +9,7 @@ const PACKAGE_PATHS = [
     path: './base/package.json'
   },
   {
-    path: './react/package.json',
-    // eslint-config-react-app came with another version
-    ignorePackages: ['@typescript-eslint/eslint-plugin', '@typescript-eslint/parser']
+    path: './react/package.json'
   }
 ];
 

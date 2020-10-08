@@ -7,7 +7,6 @@ module.exports = {
         warnOnUnsupportedTypeScriptVersion: true
       },
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off',
         'react/prop-types': 'off'
       }
     }
