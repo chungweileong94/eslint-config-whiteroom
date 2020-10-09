@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-whiteroom-base",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "White Room (Base) Eslint Configuration",
   "author": "Chung Wei <leongchungwei@hotmail.com>",
   "repository": {
@@ -19,7 +19,7 @@
     "eslint": "^6.8.0",
     "babel-eslint": "^10.1.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-whiteroom-share": "^1.0.2",
+    "eslint-config-whiteroom-share": "^1.0.3",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -33,7 +33,7 @@
     "eslint": "^6.8.0",
     "babel-eslint": "^10.1.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-whiteroom-share": "^1.0.2",
+    "eslint-config-whiteroom-share": "^1.0.3",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-prettier": "^3.1.4",
