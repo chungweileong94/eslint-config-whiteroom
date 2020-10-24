@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-whiteroom-share",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "White Room (Share) Eslint Configuration",
   "author": "Chung Wei <leongchungwei@hotmail.com>",
   "repository": {
