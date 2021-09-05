@@ -1,8 +1,8 @@
 {
   "name": "eslint-config-whiteroom",
-  "version": "2.0.2",
-  "description": "",
-  "author": "",
+  "version": "2.0.3",
+  "description": "White Room ESLint Configuration",
+  "author": "Chung Wei",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chungweileong94/eslint-config-whiteroom.git"
