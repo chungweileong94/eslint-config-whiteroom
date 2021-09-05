@@ -1,5 +1,8 @@
 {
-    "extends": "./base/index.js",
+    "extends": "./index.js",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
     "rules": {
         "comma-dangle": 0,
         "prefer-destructuring": 0,

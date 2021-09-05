@@ -1,16 +1,8 @@
 {
   "name": "eslint-config-whiteroom",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "",
   "author": "",
-  "main": "index.js",
-  "scripts": {
-    "install:share": "cd ./share && npm i",
-    "install:base": "cd ./base && npm i",
-    "install:react": "cd ./react && npm i",
-    "install": "npm run install:share && npm run install:base && npm run install:react",
-    "patchPeerDependencies": "node dependencies.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chungweileong94/eslint-config-whiteroom.git"
@@ -20,12 +12,23 @@
     "url": "https://github.com/chungweileong94/eslint-config-whiteroom/issues"
   },
   "homepage": "https://github.com/chungweileong94/eslint-config-whiteroom#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-airbnb-typescript": "14.0.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-import-helpers": "1.1.0",
+    "eslint-plugin-prettier": "4.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "prettier": "2.3.2",
+    "typescript": "^4.4.2"
+  },
   "devDependencies": {
-    "eslint": "^5.16.0 || ^6.7.2",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-import-helpers": "^1.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.2"
+    "eslint": "^7.32.0"
   }
 }
