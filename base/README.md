@@ -1,5 +1,7 @@
 # eslint-config-whiteroom-base
 
+> **Deprecated, please use [eslint-config-whiteroom](https://www.npmjs.com/package/eslint-config-whiteroom) instead.**
+
 [![npm version](https://badge.fury.io/js/eslint-config-whiteroom-base.svg)](https://badge.fury.io/js/eslint-config-whiteroom-base)
 
 ## Get Started
