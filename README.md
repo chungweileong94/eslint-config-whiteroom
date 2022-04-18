@@ -11,7 +11,7 @@ White Room ESLint Configuration
 yarn add -D eslint-config-whiteroom
 
 # Install peer dependencies
-npx npx install-peerdeps --dev eslint-config-whiteroom
+npx install-peerdeps --dev eslint-config-whiteroom
 ```
 
 ## Configure ESLint
