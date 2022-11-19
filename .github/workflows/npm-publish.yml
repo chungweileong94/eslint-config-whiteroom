@@ -4,9 +4,8 @@
 name: Node.js Package
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [created]
 
 jobs:
   publish-npm:
@@ -16,18 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: nowsprinting/check-version-format-action@v3
-        id: version
-        with:
-          prefix: 'v'
-
-      - name: Version tag check
-        run: |
-          echo "Found valid version format in tag!"
-        if: steps.version.outputs.is_valid == 'true'
-        steps:
-          - uses: JS-DevTools/npm-publish@v1
-            with:
-              check-version: true
-              greater-version-only: true
-              token: ${{secrets.npm_token}}
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
