@@ -3,7 +3,10 @@
 
 name: Node.js Package
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   publish-npm:
@@ -13,8 +16,18 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: JS-DevTools/npm-publish@v1
+      - uses: nowsprinting/check-version-format-action@v3
+        id: version
         with:
-          check-version: true
-          greater-version-only: true
-          token: ${{secrets.npm_token}}
+          prefix: 'v'
+
+      - name: Version tag check
+        run: |
+          echo "Found valid version format in tag!"
+        if: steps.version.outputs.is_valid == 'true'
+        steps:
+          - uses: JS-DevTools/npm-publish@v1
+            with:
+              check-version: true
+              greater-version-only: true
+              token: ${{secrets.npm_token}}
