@@ -3,9 +3,7 @@
 
 name: Node.js Package
 
-on:
-  release:
-    types: [created]
+on: push
 
 jobs:
   publish-npm:
@@ -17,5 +15,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm publish
+        check-version: true
+        greater-version-only: true
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
