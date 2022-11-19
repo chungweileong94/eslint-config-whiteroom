@@ -13,9 +13,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm publish
+      - uses: JS-DevTools/npm-publish@v1
         check-version: true
         greater-version-only: true
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+        with:
+          token: ${{secrets.npm_token}}
