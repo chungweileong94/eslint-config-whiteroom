@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 16
       - uses: JS-DevTools/npm-publish@v1
-        check-version: true
-        greater-version-only: true
         with:
+          check-version: true
+          greater-version-only: true
           token: ${{secrets.npm_token}}
