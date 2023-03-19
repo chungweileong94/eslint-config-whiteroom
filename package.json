@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-whiteroom",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "White Room ESLint Configuration",
   "author": "Chung Wei",
   "repository": {
