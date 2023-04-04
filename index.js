@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['eslint-config-airbnb-typescript/base', './lib/share.js'].map(require.resolve)
+  extends: ['./lib/share.js'].map(require.resolve)
 };

@@ -1,15 +1,15 @@
 {
-    "arrowParens": "avoid",
+    "arrowParens": "always",
     "bracketSpacing": false,
     "htmlWhitespaceSensitivity": "css",
     "insertPragma": false,
-    "jsxBracketSameLine": false,
+    "bracketSameLine": false,
     "jsxSingleQuote": false,
     "printWidth": 120,
     "proseWrap": "preserve",
     "quoteProps": "as-needed",
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "none",
+    "trailingComma": "all",
     "useTabs": false
 }
