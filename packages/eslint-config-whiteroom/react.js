@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: ['./lib/share.js'].map(require.resolve),
   plugins: ['react-hooks'],
   rules: {
