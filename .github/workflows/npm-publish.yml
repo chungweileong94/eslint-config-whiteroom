@@ -1,21 +1,53 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
-name: Node.js Package
-
+name: Release
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
-  publish-npm:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm publish
+          fetch-depth: 0
+
+      - name: Use PNPM
+        uses: pnpm/action-setup@v2.2.4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Copy README.md
+        run: cp README.md ./packages/eslint-config-whiteroom/README.md
+
+      - name: Create Release
+        id: changeset
+        uses: changesets/action@v1.4.1
+        with:
+          commit: "chore(release): 📦 version packages"
+          title: "chore(release): 📦  version packages"
+          publish: npx changeset publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
