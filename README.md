@@ -6,11 +6,19 @@ White Room ESLint Configuration
 
 ## Installation
 
-```
-# Install "eslint-config-whiteroom"
+```bash
+# npm
+npm install -D eslint-config-whiteroom
+
+# yarn
 yarn add -D eslint-config-whiteroom
 
-# Install peer dependencies
+# pnpm
+pnpm add -D eslint-config-whiteroom
+```
+
+### Install peer dependencies
+```bash
 npx install-peerdeps --dev eslint-config-whiteroom
 ```
 
@@ -34,12 +42,3 @@ In your ESLint configuration file:
    +   'whiteroom',
      ]
    ```
-
-   > If you are using React, do this instead:
-   >
-   > ```diff
-   > extends: [
-   >   ...
-   > + 'whiteroom/react'
-   > ]
-   > ```
